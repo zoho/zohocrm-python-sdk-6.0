@@ -124,8 +124,15 @@ class Utility(object):
     @staticmethod
     def get_fields(module_api_name, handler_instance=None):
         with Utility.lock:
-            Utility.module_api_name = module_api_name
-            Utility.get_fields_info(module_api_name, handler_instance)
+            if "," in module_api_name:
+                name_split = str(module_api_name).split(',')
+                if len(name_split) > 1:
+                    for name in name_split:
+                        Utility.module_api_name = name
+                        Utility.get_fields_info(name, handler_instance)
+            else:
+                Utility.module_api_name = module_api_name
+                Utility.get_fields_info(module_api_name, handler_instance)
 
     @staticmethod
     def get_fields_info(module_api_name, handler_instance=None):

@@ -1,6 +1,6 @@
 from .action_wrapper import ActionWrapper
 from .owner import Owner
-from .custom_views_operations import CustomViewsOperations, GetCustomViewsParam, GetCustomViewParam
+from .custom_views_operations import CustomViewsOperations, GetCustomViewsParam, GetCustomViewParam, ChangeSortOrderOfCustomViewsParam, ChangeSortOrderOfCustomViewParam
 from .criteria import Criteria
 from .pin_fields import PinFields
 from .body_wrapper import BodyWrapper

@@ -1,44 +1,44 @@
 try:
 	from zohocrmsdk.src.com.zoho.crm.api.exception import SDKException
 	from zohocrmsdk.src.com.zoho.crm.api.util import Constants
-	from zohocrmsdk.src.com.zoho.crm.api.custom_views.action_handler import ActionHandler
+	from zohocrmsdk.src.com.zoho.crm.api.users.count_handler import CountHandler
 except Exception:
 	from ..exception import SDKException
 	from ..util import Constants
-	from .action_handler import ActionHandler
+	from .count_handler import CountHandler
 
 
-class ActionWrapper(ActionHandler):
+class CountWrapper(CountHandler):
 	def __init__(self):
-		"""Creates an instance of ActionWrapper"""
+		"""Creates an instance of CountWrapper"""
 		super().__init__()
 
-		self.__custom_views = None
+		self.__count = None
 		self.__key_modified = dict()
 
-	def get_custom_views(self):
+	def get_count(self):
 		"""
-		The method to get the custom_views
+		The method to get the count
 
 		Returns:
-			list: An instance of list
+			int: An int representing the count
 		"""
 
-		return self.__custom_views
+		return self.__count
 
-	def set_custom_views(self, custom_views):
+	def set_count(self, count):
 		"""
-		The method to set the value to custom_views
+		The method to set the value to count
 
 		Parameters:
-			custom_views (list) : An instance of list
+			count (int) : An int representing the count
 		"""
 
-		if custom_views is not None and not isinstance(custom_views, list):
-			raise SDKException(Constants.DATA_TYPE_ERROR, 'KEY: custom_views EXPECTED TYPE: list', None, None)
+		if count is not None and not isinstance(count, int):
+			raise SDKException(Constants.DATA_TYPE_ERROR, 'KEY: count EXPECTED TYPE: int', None, None)
 		
-		self.__custom_views = custom_views
-		self.__key_modified['custom_views'] = 1
+		self.__count = count
+		self.__key_modified['count'] = 1
 
 	def is_key_modified(self, key):
 		"""

@@ -10,9 +10,39 @@ class Detail(object):
 	def __init__(self):
 		"""Creates an instance of Detail"""
 
+		self.__available_count = None
 		self.__limits = None
 		self.__used_count = None
 		self.__key_modified = dict()
+
+	def get_available_count(self):
+		"""
+		The method to get the available_count
+
+		Returns:
+			Limit: An instance of Limit
+		"""
+
+		return self.__available_count
+
+	def set_available_count(self, available_count):
+		"""
+		The method to set the value to available_count
+
+		Parameters:
+			available_count (Limit) : An instance of Limit
+		"""
+
+		try:
+			from zohocrmsdk.src.com.zoho.crm.api.features.limit import Limit
+		except Exception:
+			from .limit import Limit
+
+		if available_count is not None and not isinstance(available_count, Limit):
+			raise SDKException(Constants.DATA_TYPE_ERROR, 'KEY: available_count EXPECTED TYPE: Limit', None, None)
+		
+		self.__available_count = available_count
+		self.__key_modified['available_count'] = 1
 
 	def get_limits(self):
 		"""

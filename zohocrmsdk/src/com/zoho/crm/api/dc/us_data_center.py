@@ -18,7 +18,7 @@ class USDataCenter(DataCenter):
         :return: An instance of Environment
         """
 
-        return DataCenter.Environment("https://www.zohoapis.com", cls().get_iam_url(), cls().get_file_upload_url(), "us_prd")
+        return DataCenter.Environment("https://www.zohoapis.com", cls().get_iam_url(), cls().get_file_upload_url())
 
     @classmethod
     def SANDBOX(cls):
@@ -28,7 +28,7 @@ class USDataCenter(DataCenter):
         :return: An instance of Environment
         """
 
-        return DataCenter.Environment("https://sandbox.zohoapis.com", cls().get_iam_url(), cls().get_file_upload_url(), "us_sdb")
+        return DataCenter.Environment("https://sandbox.zohoapis.com", cls().get_iam_url(), cls().get_file_upload_url())
 
     @classmethod
     def DEVELOPER(cls):

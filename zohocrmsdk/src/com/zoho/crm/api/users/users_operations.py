@@ -277,6 +277,41 @@ class UsersOperations(object):
 			from .response_handler import ResponseHandler
 		return handler_instance.api_call(ResponseHandler.__module__, 'application/json')
 
+	def users_count(self, param_instance=None):
+		"""
+		The method to users count
+
+		Parameters:
+			param_instance (ParameterMap) : An instance of ParameterMap
+
+		Returns:
+			APIResponse: An instance of APIResponse
+
+		Raises:
+			SDKException
+		"""
+
+		try:
+			from zohocrmsdk.src.com.zoho.crm.api import ParameterMap
+		except Exception:
+			from ..parameter_map import ParameterMap
+
+		if param_instance is not None and not isinstance(param_instance, ParameterMap):
+			raise SDKException(Constants.DATA_TYPE_ERROR, 'KEY: param_instance EXPECTED TYPE: ParameterMap', None, None)
+		
+		handler_instance = CommonAPIHandler()
+		api_path = ''
+		api_path = api_path + '/crm/v6/users/actions/count'
+		handler_instance.set_api_path(api_path)
+		handler_instance.set_http_method(Constants.REQUEST_METHOD_GET)
+		handler_instance.set_category_method(Constants.REQUEST_CATEGORY_READ)
+		handler_instance.set_param(param_instance)
+		try:
+			from zohocrmsdk.src.com.zoho.crm.api.users.count_handler import CountHandler
+		except Exception:
+			from .count_handler import CountHandler
+		return handler_instance.api_call(CountHandler.__module__, 'application/json')
+
 
 class GetUsersParam(object):
 	type = Param('type', 'com.zoho.crm.api.Users.GetUsersParam')
@@ -291,3 +326,7 @@ class GetUsersHeader(object):
 
 class GetUserHeader(object):
 	if_modified_since = Header('If-Modified-Since', 'com.zoho.crm.api.Users.GetUserHeader')
+
+
+class UsersCountParam(object):
+	type = Param('type', 'com.zoho.crm.api.Users.UsersCountParam')

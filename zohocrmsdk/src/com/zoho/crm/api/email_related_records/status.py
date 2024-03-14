@@ -17,6 +17,7 @@ class Status(object):
 		self.__bounced_time = None
 		self.__bounced_reason = None
 		self.__category = None
+		self.__sub_category = None
 		self.__key_modified = dict()
 
 	def get_first_open(self):
@@ -192,6 +193,30 @@ class Status(object):
 		
 		self.__category = category
 		self.__key_modified['category'] = 1
+
+	def get_sub_category(self):
+		"""
+		The method to get the sub_category
+
+		Returns:
+			string: A string representing the sub_category
+		"""
+
+		return self.__sub_category
+
+	def set_sub_category(self, sub_category):
+		"""
+		The method to set the value to sub_category
+
+		Parameters:
+			sub_category (string) : A string representing the sub_category
+		"""
+
+		if sub_category is not None and not isinstance(sub_category, str):
+			raise SDKException(Constants.DATA_TYPE_ERROR, 'KEY: sub_category EXPECTED TYPE: str', None, None)
+		
+		self.__sub_category = sub_category
+		self.__key_modified['sub_category'] = 1
 
 	def is_key_modified(self, key):
 		"""

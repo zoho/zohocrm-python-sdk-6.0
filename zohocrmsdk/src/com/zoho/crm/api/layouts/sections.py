@@ -101,7 +101,7 @@ class Sections(object):
 		The method to get the tab_traversal
 
 		Returns:
-			int: An int representing the tab_traversal
+			string: A string representing the tab_traversal
 		"""
 
 		return self.__tab_traversal
@@ -111,11 +111,11 @@ class Sections(object):
 		The method to set the value to tab_traversal
 
 		Parameters:
-			tab_traversal (int) : An int representing the tab_traversal
+			tab_traversal (string) : A string representing the tab_traversal
 		"""
 
-		if tab_traversal is not None and not isinstance(tab_traversal, int):
-			raise SDKException(Constants.DATA_TYPE_ERROR, 'KEY: tab_traversal EXPECTED TYPE: int', None, None)
+		if tab_traversal is not None and not isinstance(tab_traversal, str):
+			raise SDKException(Constants.DATA_TYPE_ERROR, 'KEY: tab_traversal EXPECTED TYPE: str', None, None)
 		
 		self.__tab_traversal = tab_traversal
 		self.__key_modified['tab_traversal'] = 1
