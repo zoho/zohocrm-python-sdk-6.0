@@ -111,6 +111,29 @@ class FeaturesOperations(object):
 			from .response_handler import ResponseHandler
 		return handler_instance.api_call(ResponseHandler.__module__, 'application/json')
 
+	def get_user_licences_count(self):
+		"""
+		The method to get user licences count
+
+		Returns:
+			APIResponse: An instance of APIResponse
+
+		Raises:
+			SDKException
+		"""
+
+		handler_instance = CommonAPIHandler()
+		api_path = ''
+		api_path = api_path + '/crm/v6/__features/user_licenses'
+		handler_instance.set_api_path(api_path)
+		handler_instance.set_http_method(Constants.REQUEST_METHOD_GET)
+		handler_instance.set_category_method(Constants.REQUEST_CATEGORY_READ)
+		try:
+			from zohocrmsdk.src.com.zoho.crm.api.features.response_handler import ResponseHandler
+		except Exception:
+			from .response_handler import ResponseHandler
+		return handler_instance.api_call(ResponseHandler.__module__, 'application/json')
+
 
 class GetFeatureDetailsParam(object):
 	module = Param('module', 'com.zoho.crm.api.Features.GetFeatureDetailsParam')

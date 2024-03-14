@@ -182,7 +182,7 @@ class Constants(object):
 
     ZOHO_SDK = "X-ZOHO-SDK"
 
-    SDK_VERSION = "1.0.0"
+    SDK_VERSION = "2.0.0"
 
     CONTENT_DISPOSITION = "Content-Disposition"
 

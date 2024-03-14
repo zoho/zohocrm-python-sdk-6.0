@@ -1,6 +1,6 @@
 from .owner import Owner
 from .action_wrapper import ActionWrapper
-from .users_operations import UsersOperations, GetUsersParam, GetUsersHeader, GetUserHeader
+from .users_operations import UsersOperations, GetUsersParam, GetUsersHeader, GetUserHeader, UsersCountParam
 from .customize_info import CustomizeInfo
 from .role import Role
 from .associated_group import AssociatedGroup
@@ -13,9 +13,11 @@ from .users import Users
 from .api_exception import APIException
 from .action_response import ActionResponse
 from .response_handler import ResponseHandler
+from .count_wrapper import CountWrapper
 from .tab import Tab
 from .success_response import SuccessResponse
 from .response_wrapper import ResponseWrapper
+from .count_handler import CountHandler
 from .action_handler import ActionHandler
 from .theme import Theme
 from .info import Info

@@ -401,7 +401,7 @@ class CustomViews(object):
 		The method to get the favorite
 
 		Returns:
-			bool: A bool representing the favorite
+			int: An int representing the favorite
 		"""
 
 		return self.__favorite
@@ -411,11 +411,11 @@ class CustomViews(object):
 		The method to set the value to favorite
 
 		Parameters:
-			favorite (bool) : A bool representing the favorite
+			favorite (int) : An int representing the favorite
 		"""
 
-		if favorite is not None and not isinstance(favorite, bool):
-			raise SDKException(Constants.DATA_TYPE_ERROR, 'KEY: favorite EXPECTED TYPE: bool', None, None)
+		if favorite is not None and not isinstance(favorite, int):
+			raise SDKException(Constants.DATA_TYPE_ERROR, 'KEY: favorite EXPECTED TYPE: int', None, None)
 		
 		self.__favorite = favorite
 		self.__key_modified['favorite'] = 1

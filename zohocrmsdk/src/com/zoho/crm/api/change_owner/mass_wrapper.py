@@ -1,11 +1,11 @@
 try:
 	from zohocrmsdk.src.com.zoho.crm.api.exception import SDKException
-	from zohocrmsdk.src.com.zoho.crm.api.change_owner import BodyWrapper
 	from zohocrmsdk.src.com.zoho.crm.api.util import Constants
+	from zohocrmsdk.src.com.zoho.crm.api.change_owner.body_wrapper import BodyWrapper
 except Exception:
 	from ..exception import SDKException
-	from ..change_owner import BodyWrapper
 	from ..util import Constants
+	from .body_wrapper import BodyWrapper
 
 
 class MassWrapper(BodyWrapper):

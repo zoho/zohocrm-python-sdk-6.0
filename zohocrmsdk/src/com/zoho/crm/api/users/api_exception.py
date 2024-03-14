@@ -3,16 +3,18 @@ try:
 	from zohocrmsdk.src.com.zoho.crm.api.util import Choice, Constants
 	from zohocrmsdk.src.com.zoho.crm.api.users.action_response import ActionResponse
 	from zohocrmsdk.src.com.zoho.crm.api.users.response_handler import ResponseHandler
+	from zohocrmsdk.src.com.zoho.crm.api.users.count_handler import CountHandler
 	from zohocrmsdk.src.com.zoho.crm.api.users.action_handler import ActionHandler
 except Exception:
 	from ..exception import SDKException
 	from ..util import Choice, Constants
 	from .action_response import ActionResponse
 	from .response_handler import ResponseHandler
+	from .count_handler import CountHandler
 	from .action_handler import ActionHandler
 
 
-class APIException(ActionResponse, ResponseHandler, ActionHandler):
+class APIException(ActionResponse, ResponseHandler, ActionHandler, CountHandler):
 	def __init__(self):
 		"""Creates an instance of APIException"""
 		super().__init__()
