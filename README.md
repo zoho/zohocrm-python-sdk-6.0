@@ -54,7 +54,7 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-python-sdk-6.
 ## Including the SDK in your project
 You can include the SDK to your project using:
 
-- For including the latest [version](https://github.com/zoho/zohocrm-python-sdk-6.0/releases/tag/1.0.0)
+- For including the latest [version](https://github.com/zoho/zohocrm-python-sdk-6.0/releases/tag/2.0.0)
 
     - Install **Python** from [python.org](https://www.python.org/downloads/) (if not installed).
 
@@ -81,4 +81,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer [here](/versions/1.0.0/README.md).
+For more details, kindly refer [here](/versions/2.0.0/README.md).
