@@ -26,12 +26,12 @@ License
 ## Latest Version
 
 - [5.0.0](/versions/5.0.0/README.md)
-  - Changed timezone field datatype in Email Drafts ScheduleDetails.
-  - Changed timezone field datatype in ShiftHours.
-  - Changed time_zone field datatype in Users.
+  - Email Drafts ScheduleDetails timezone field datatype changed (TimeZone to str).
+  - ShiftHours timezone field datatype changed (TimeZone to str).
+  - Users time_zone field datatype changed(TimeZone to str).
 
 - [4.0.0](/versions/4.0.0/README.md)
-    - Changed phone and mobile field datatype in Users.
+    - Users phone and mobile field datatype changed(int to str).
     - Support move_attachments_to field in the LeadConverter class.
 
 - [2.0.0](/versions/2.0.0/README.md)
