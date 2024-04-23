@@ -366,6 +366,6 @@ class GetRecord:
 
 module_api_name = "Leads"
 record_id = 347502001
-destination_foler = "/Users/docs/file"
+destination_folder = "/Users/docs/file"
 GetRecord.initialize()
-GetRecord.get_record(module_api_name, record_id, destination_foler)
+GetRecord.get_record(module_api_name, record_id, destination_folder)
