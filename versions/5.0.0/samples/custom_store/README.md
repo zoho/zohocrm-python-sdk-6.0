@@ -4,15 +4,10 @@ Our Python SDK comes with built-in support for File Persistence, which stores yo
 
 We have added examples for three different types using custom persistence:
 
-- [SQLite3 DB](#custom_store_sqllitepy): 
-  - In this case, the tokens are persisted in a file on disk. The data in this database persists even after the program exits, as long as the file is not deleted.
-- [In-Memory SQLite3 DB](#custom_store_in_memorypy): 
-  - In this case, the tokens are persisted in the RAM, and not on disk. Once the connection to the DB is closed, the DB and all its data will be deleted.
-- [Custom Store List](#custom_store_listpy): 
-  - In this case, the token details are stored in a list object. The data exists only while the app is running.
+### 1. [SQLite3 DB](custom_store_sqlite.py): 
 
-[custom_store_sqllite.py](custom_store_sqllite.py)
-------------------------
+In this case, the tokens are persisted in a file on disk. The data in this database persists even after the program exits, as long as the file is not deleted.
+
 The sqlite3.connect('zohooauth.db') command in Python is used to create a connection to an SQLite database stored in a file called zohooauth.db. 
 
 Persistent Database:
@@ -31,9 +26,12 @@ Initialization Sample Code:
         except Exception as ex:
             print(ex)
 ```
+Please check out the complete sample code [here](custom_store_sqlite.py).
 
-[custom_store_in_memory.py](custom_store_in_memory.py)
--------------------------
+### 2. [In-Memory SQLite3 DB](custom_store_in_memory.py)
+
+In this case, the tokens are persisted in the RAM, and not on disk. Once the connection to the DB is closed, the DB and all its data will be deleted.
+
 The sqlite3.connect(':memory:') command in Python is used to create an in-memory SQLite database. This type of database resides entirely in RAM and does not persist to disk. Here are the key points about using an in-memory SQLite database:
 
 Temporary Database:
@@ -50,9 +48,12 @@ Initialization Sample Code:
         except Exception as ex:
             print(ex)
 ```
+Please check out the complete sample code [here](custom_store_in_memory.py).
 
-[custom_store_list.py](custom_store_list.py)
---------------------
+### 3. [Custom Store List](custom_store_list.py)
+
+In this case, the token details are stored in a list object. The data exists only while the app is running.
+
 The token details stored in list.
 
 Temporary Storage:
@@ -68,3 +69,4 @@ Initialization Sample Code:
         except Exception as ex:
             print(ex)
 ```
+Please check out the complete sample code [here](custom_store_list.py).
