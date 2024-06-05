@@ -217,6 +217,8 @@ store = FileStore(file_path='/Users/username/Documents/python_sdk_token.txt')
 ### Custom Persistence
 Users can create their own logic for storing and retrieving authentication tokens using the custom persistence technique. To use Custom Persistence, you must implement **[TokenStore](zohocrmsdk/src/com/zoho/api/authenticator/store/token_store.py)** and override the methods.
 
+Please refer to [this](/samples/custom_store/README.md) for custom persistence samples.
+
 ```python
 from zohocrmsdk.src.com.zoho.api.authenticator.store import TokenStore
 
