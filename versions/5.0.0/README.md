@@ -327,7 +327,7 @@ The **environment** key contains the domain information to make API calls. The *
   - Use the following method for **Id flow :**
   ```python
   from zohocrmsdk.src.com.zoho.api.authenticator.oauth_token import OAuthToken
-  token = OAuthToken(id="id")
+  token = OAuthToken(id="tokenId")
   ```
 
 - Create an instance of **Logger** Class to log exception and API information.
@@ -438,7 +438,8 @@ class SDKInitializer(object):
                                      file_path='/Users/user_name/Documents/python_sdk_log.log')
         environment = USDataCenter.PRODUCTION()
         token = OAuthToken(client_id='clientId', client_secret='clientSecret', grant_token='grant_token',
-                           refresh_token="refresh_token", redirect_url='redirectURL', id="id")
+                           refresh_token="refresh_token", redirect_url='redirectURL', id="token_id")
+        
         # store = FileStore(file_path='/Users/username/Documents/python_sdk_tokens.txt')
         store = DBStore(host='host_name', database_name='database_name', user_name='user_name', password='password',
                         port_number='port_number', table_name="table_name")
@@ -465,6 +466,9 @@ SDKInitializer.initialize()
 
 
 ```
+Note:
+ - id: This is the unique id of the token which is auto-generated after successful SDK initialization.
+ - The value of id param in **OAuthToken** class should not match its parameter name.
 
 - You can now access the functionalities of the SDK. Refer to the sample codes to make various API calls through the SDK.
 
