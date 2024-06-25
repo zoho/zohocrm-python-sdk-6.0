@@ -29,9 +29,9 @@ License
   - Blueprint Transition percent_partial_save field datatype changed(int to float).
   - Blueprint Field convert_mapping field datatype changed(ConvertMapping to dict).
   - Handled Record Field API Name and datatype.
-  - Record FileDetails id field datatype changed(int to string).
+  - Record FileDetails id field datatype changed(int to str).
   - Added new fields (created_time__s, modified_time__s, created_by__s, owner__s, and modified_by__s) in Record FileDetails class.
-  - Record ImageUpload id field datatype changed(int to string).
+  - Record ImageUpload id field datatype changed(int to str).
   - Record multi_user_lookup type fields datatype changed([MinifiedUser] to [Record]).
   - Added new type and owner_id param in EmailRelatedRecordsOperations class constructor.
   - Added new id and name param in GetDownloadAttachmentsDetailsParam class.
