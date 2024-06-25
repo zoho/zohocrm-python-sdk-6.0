@@ -25,6 +25,18 @@ License
 
 ## Latest Version
 
+- [6.0.0](/versions/6.0.0/README.md)
+  - Blueprint Transition percent_partial_save field datatype changed(int to float).
+  - Blueprint Field convert_mapping field datatype changed(ConvertMapping to dict).
+  - Handled Record Field API Name and datatype.
+  - Record FileDetails id field datatype changed(int to string).
+  - Added new fields (created_time__s, modified_time__s, created_by__s, owner__s, and modified_by__s) in Record FileDetails class.
+  - Record ImageUpload id field datatype changed(int to string).
+  - Record multi_user_lookup type fields datatype changed([MinifiedUser] to [Record]).
+  - Added new type and owner_id param in EmailRelatedRecordsOperations class constructor.
+  - Added new id and name param in GetDownloadAttachmentsDetailsParam class.
+  - Added new ids param in GetAppointmentsRescheduledHistoryParam class.
+
 - [5.0.0](/versions/5.0.0/README.md)
   - Email Drafts ScheduleDetails timezone field datatype changed (TimeZone to str).
   - ShiftHours timezone field datatype changed (TimeZone to str).
@@ -63,7 +75,7 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-python-sdk-6.
 ## Including the SDK in your project
 You can include the SDK to your project using:
 
-- For including the latest [version](https://github.com/zoho/zohocrm-python-sdk-6.0/releases/tag/5.0.0)
+- For including the latest [version](https://github.com/zoho/zohocrm-python-sdk-6.0/releases/tag/6.0.0)
 
     - Install **Python** from [python.org](https://www.python.org/downloads/) (if not installed).
 
@@ -90,4 +102,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer [here](/versions/5.0.0/README.md).
+For more details, kindly refer [here](/versions/6.0.0/README.md).
