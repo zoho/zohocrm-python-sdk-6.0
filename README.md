@@ -25,7 +25,7 @@ License
 
 ## Latest Version
 
-- [7.0.0](/versions/7.0.0/README.md)
+- [7.0.1](/versions/7.0.1/README.md)
   - Handled Record `rollup_summary` datatype.
 
 - [6.0.1](/versions/6.0.1/README.md)
@@ -81,7 +81,7 @@ For older versions, please [refer](https://github.com/zoho/zohocrm-python-sdk-6.
 ## Including the SDK in your project
 You can include the SDK to your project using:
 
-- For including the latest [version](https://github.com/zoho/zohocrm-python-sdk-6.0/releases/tag/7.0.0)
+- For including the latest [version](https://github.com/zoho/zohocrm-python-sdk-6.0/releases/tag/7.0.1)
 
     - Install **Python** from [python.org](https://www.python.org/downloads/) (if not installed).
 
@@ -108,4 +108,4 @@ For example, if you generate the tokens for your Sandbox environment in the CN d
 
 ---
 
-For more details, kindly refer [here](/versions/7.0.0/README.md).
+For more details, kindly refer [here](/versions/7.0.1/README.md).
