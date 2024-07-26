@@ -11,7 +11,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='zohocrmsdk6_0',
-    version='6.0.1',
+    version='7.0.1',
     description='Zoho CRM SDK for ZOHO CRM 6 APIs',
     long_description=long_description,
     long_description_content_type='text/markdown',
